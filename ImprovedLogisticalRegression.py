@@ -14,7 +14,7 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-TableOfData = pd.read_csv("C:/Users/smith/OneDrive/Documents/GitHub/Machine-learning-experiments/Exoplanets/EP&FP_RemovedColumns.csv", error_bad_lines=False)
+TableOfData = pd.read_csv("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/EP&FP_RemovedColumns.csv", error_bad_lines=False)
 
 numberOfSucesses = 0
 learningRate = 0.02
@@ -120,7 +120,7 @@ trials = 1
 print(cost)
 print(numberOfSucesses)
 
-while (numberOfSucesses < 5000 and trials <= 1000):
+while ((numberOfSucesses/TableOfData.shape[0]) < 0.90 and trials <= 1000):
     parameters, newCost = ParameterEvaluator(parameters, cost, numberOfSucesses, hypotheses, learningRate)
     numberOfSucesses, hypotheses = AccuracyEvaluator(parameters, numberOfSucesses)
     if newCost == cost:
@@ -131,6 +131,8 @@ while (numberOfSucesses < 5000 and trials <= 1000):
         trials += 1
         print("Trial Complete")
         print(cost)
+
+np.save("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/LR0,02.npy", parameters, allow_pickle = True)
 
 print(cost)
 print(parameters)
