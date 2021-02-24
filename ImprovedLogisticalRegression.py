@@ -132,7 +132,7 @@ while ((numberOfSucesses/TableOfData.shape[0]) < 0.90 and trials <= 500):
         print("Trial Complete")
         print(cost)
 
-np.save("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/LR0,02NoCount.npy", parameters, allow_pickle = True)
+np.save("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/LR0,02.npy", parameters, allow_pickle = True)
 
 print(cost)
 print(parameters)

@@ -7,7 +7,7 @@ import pandas as pd
 import seaborn as sns
 import random
 
-fileParametersArray = np.load("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/LR0,02NoCount.npy", allow_pickle = True)
+fileParametersArray = np.load("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/LR0,02.npy", allow_pickle = True)
 parameters = fileParametersArray.tolist()
 
 pd.set_option('display.max_columns', None)
