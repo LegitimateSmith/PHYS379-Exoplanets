@@ -14,10 +14,10 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-TableOfData = pd.read_csv("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/EP&FP_RemovedColumns.csv", error_bad_lines=False)
+TableOfData = pd.read_csv("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/EP&FP_FinalColumns.csv", error_bad_lines=False)
 
 numberOfSucesses = 0
-learningRate = 0.025
+learningRate = 0.026
 parameters = []
 
 for i in range(1, TableOfData.shape[1]):
@@ -132,7 +132,7 @@ while ((numberOfSucesses/TableOfData.shape[0]) < 0.90 and trials <= 500):
         print("Trial Complete")
         print(cost)
 
-np.save("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/LR0,025.npy", parameters, allow_pickle = True)
+np.save("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/LR0,026_FinalColumns.npy", parameters, allow_pickle = True)
 
 print(cost)
 print(parameters)
