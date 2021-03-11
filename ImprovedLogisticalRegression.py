@@ -17,8 +17,9 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 TableOfData = pd.read_csv("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/EP&FP_FinalColumns.csv", error_bad_lines=False)
 
 numberOfSucesses = 0
-learningRate = 0.026
+learningRate = 0.025
 parameters = []
+costTracker = []
 
 for i in range(1, TableOfData.shape[1]):
     parameters.append(0.0)
@@ -118,6 +119,7 @@ cost = CostFunction(parameters)
 numberOfSucesses, hypotheses = AccuracyEvaluator(parameters, numberOfSucesses)
 trials = 1
 print(cost)
+costTracker.append(cost)
 print(numberOfSucesses)
 
 while ((numberOfSucesses/TableOfData.shape[0]) < 0.90 and trials <= 500):
@@ -128,11 +130,13 @@ while ((numberOfSucesses/TableOfData.shape[0]) < 0.90 and trials <= 500):
         break
     else:
         cost = newCost
+        costTracker.append(cost)
         trials += 1
         print("Trial Complete")
         print(cost)
 
-np.save("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/LR0,026_FinalColumns.npy", parameters, allow_pickle = True)
+np.save("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/LR0,025_FinalColumns.npy", parameters, allow_pickle = True)
+np.save("C:/Users/smith/OneDrive/Documents/GitHub/PHYS379-Exoplanets/LR0,025_Cost_FinalColumns.npy", costTracker, allow_pickle = True)
 
 print(cost)
 print(parameters)
