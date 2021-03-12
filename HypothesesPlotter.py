@@ -43,6 +43,6 @@ sheet1 = book.add_sheet('Hypotheses')
 for i,e in enumerate(hypotheses):
     sheet1.write(i,1,e)
 
-name = "HypothesesTracking.xls"
+name = "HypothesesPlotter.xls"
 book.save(name)
 book.save(TemporaryFile())

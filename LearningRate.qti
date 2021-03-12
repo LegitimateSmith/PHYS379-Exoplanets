@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE qti>
+<qti app="QtiPlot" version="0.9.9.14" dpi="96" arch="Win64" script="muParser" windows="2" expand="1">
+	<window type="1" name="Table1" date="2459285.473024" x="0" y="0" w="255" h="280">
+		<tab rows="30" cols="2" labels="0">
+			<col name="1" type="6" num="0" prec="13" plot="1" width="100" stat="0" data="0.02;0.023;0.024;0.025;0.026;0.03;"/>
+			<col name="2" type="6" num="0" prec="13" plot="2" width="100" stat="0" data="81.57;81.64;81.64;81.71;81.57;81.29;"/>
+		</tab>
+	</window>
+	<window type="3" name="Graph1" date="2459285.4746345" x="594" y="9" w="731" h="659" active="1" dpi="96">
+		<layout cw="715" ch="600" w="390" h="287" left="5" right="5" top="5" bottom="5" rows="1" cols="1" vSpace="5" hSpace="5" hAlign="0" vAlign="0" align="0" common="0" link="0" scale="1" sPrint="0" cmPrint="0" atUnits="1" atdIndex="0" atPolicy="4" alMode="0" luMode="2"/>
+		<tab x="7" y="7" w="701" h="585" autoscale="1" maxMajorTicks="20" gap="1" scaleFont="1" dataMargins="1">
+			<page x="0.00979021" y="0.0116667" w="0.98042" h="0.975"/>
+			<title text="The Effect of Learning Rate upon Success Percentage" color="#000000" font="Lucida Sans Unicode,16.1602,-1,5,75,0,0,0,0,0" align="4228" fmw="614"/>
+			<frame bg="#ffffff,0"/>
+			<canvas x="88" y="49" w="596" h="479" fixRatio="0" bg="#ffffff,0"/>
+			<grid xAxis="2" yAxis="0">
+				<majx lc="#a0a0a4" lw="1" ls="0"/>
+				<minx lc="#a0a0a4" lw="1" ls="1"/>
+				<majy lc="#a0a0a4" lw="1" ls="0"/>
+				<miny lc="#a0a0a4" lw="1" ls="1"/>
+			</grid>
+			<curve type="2" z="21" table="Table1" x="1" y="2" from="0" to="-1" line="0" lc="#000000" lw="1" ls="0" brc="#000000" brs="0">
+				<symbol style="1" size="7" lc="#000000" lw="1" ls="0" brc="#000000"/>
+			</curve>
+			<axis id="0" on="1" type="0" format="0" prec="6" lw="1">
+				<div from="81.2" to="81.8" step="0" maj="7" min="5" type="0"/>
+				<ticks maj="1" majl="15" min="1" minl="8"/>
+				<title text="Success Percentage on the Test Set" color="#000000" font="Lucida Sans Unicode,12.9282,-1,5,75,0,0,0,0,0" align="5124" space="2" fmw="321"/>
+				<labels space="4" font="Lucida Sans Unicode,12.9282,-1,5,50,0,0,0,0,0" align="0"/>
+			</axis>
+			<axis id="1" on="0" type="0" format="0" prec="6" lw="1">
+				<div from="81.2" to="81.8" step="0" maj="7" min="5" type="0"/>
+				<ticks maj="1" majl="15" min="1" minl="8"/>
+			</axis>
+			<axis id="2" on="1" type="0" format="0" prec="6" lw="1">
+				<div from="0.018" to="0.032" step="0" maj="8" min="5" type="0"/>
+				<ticks maj="1" majl="15" min="1" minl="8"/>
+				<title text="Learning Rate" color="#000000" font="Lucida Sans Unicode,12.9282,-1,5,75,0,0,0,0,0" align="5124" space="2" fmw="127"/>
+				<labels space="4" font="Lucida Sans Unicode,12.9282,-1,5,50,0,0,0,0,0" align="0"/>
+			</axis>
+			<axis id="3" on="0" type="0" format="0" prec="6" lw="1">
+				<div from="0.018" to="0.032" step="0" maj="8" min="5" type="0"/>
+				<ticks maj="1" majl="15" min="1" minl="8"/>
+			</axis>
+		</tab>
+	</window>
+</qti>
